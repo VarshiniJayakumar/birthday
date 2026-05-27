@@ -1,0 +1,102 @@
+.surprise-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, var(--dark) 0%, #0d0820 100%);
+}
+
+.surprise-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.surprise-lock,
+.surprise-reveal {
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Scratch */
+.scratch-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; }
+.scratch-canvas {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  touch-action: none;
+}
+.scratch-progress {
+  width: 300px; height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.scratch-progress div {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.1s;
+}
+
+/* Hold */
+.hold-wrap { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.hold-ring {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(var(--gold) var(--p, 0%), rgba(255,255,255,0.08) 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+.hold-btn {
+  width: 112px; height: 112px;
+  border-radius: 50%;
+  background: var(--dark2);
+  border: none;
+  color: var(--gold-light);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.hold-btn:active { background: rgba(201,168,76,0.1); }
+.hold-hint { font-size: 0.8rem; color: rgba(245,240,232,0.5); }
+
+/* Password */
+.password-form { display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; }
+.password-prompt { color: rgba(245,240,232,0.7); font-size: 0.95rem; }
+.password-input {
+  width: 100%;
+  max-width: 280px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--white);
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.password-input:focus { border-color: var(--gold); }
+.password-error { border-color: #e85050 !important; animation: shake 0.3s ease; }
+@keyframes shake {
+  0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)}
+}
+.password-hint { color: var(--gold-light); font-size: 0.85rem; font-style: italic; }
+
+/* Reveal */
+.reveal-icon  { font-size: 3.5rem; }
+.reveal-title { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.reveal-message {
+  color: rgba(245,240,232,0.8);
+  line-height: 1.7;
+  font-size: 1rem;
+  max-width: 380px;
+}
+.reveal-video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}

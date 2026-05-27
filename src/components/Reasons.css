@@ -1,0 +1,91 @@
+.reasons-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, var(--black) 0%, #0d0820 50%, var(--black) 100%);
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.card-highlight .flip-card-wrap {
+  animation: pulse-highlight 0.5s ease-in-out 3;
+}
+@keyframes pulse-highlight {
+  0%,100% { transform: scale(1); box-shadow: none; }
+  50%      { transform: scale(1.08); box-shadow: 0 0 20px var(--gold); }
+}
+
+.flip-card-wrap {
+  perspective: 600px;
+  height: 160px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease;
+}
+.flip-card-wrap.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.flip-card-front {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  gap: 0.4rem;
+}
+.flip-front-icon { font-size: 2rem; }
+.flip-front-num  { font-size: 0.75rem; letter-spacing: 0.1em; }
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: rgba(20,10,30,0.9);
+  border: 1px solid rgba(201,168,76,0.3);
+}
+.flip-reason {
+  font-size: 0.9rem;
+  color: var(--cream);
+  text-align: center;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.reasons-actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+.btn-another {
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-light);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-another:hover {
+  background: rgba(201,168,76,0.12);
+  transform: translateY(-2px);
+}
+.all-revealed {
+  font-size: 1.2rem;
+  font-style: italic;
+}

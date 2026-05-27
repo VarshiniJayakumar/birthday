@@ -1,0 +1,139 @@
+.music-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, var(--black) 0%, #0a0d1a 100%);
+}
+
+.music-player {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Vinyl */
+.vinyl-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.vinyl {
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%,
+    #1a1a1a 0%, #1a1a1a 20%,
+    #2a2a2a 20%, #2a2a2a 22%,
+    #111 22%, #111 40%,
+    #222 40%, #222 42%,
+    #111 42%, #111 60%,
+    #222 60%, #222 62%,
+    #111 62%
+  );
+  box-shadow: 0 0 30px rgba(201,168,76,0.2), 0 4px 20px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.vinyl-label {
+  width: 40px; height: 40px;
+  background: var(--gold-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  position: absolute;
+}
+
+.now-playing {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.np-title   { font-size: 1.1rem; color: var(--white); font-style: italic; }
+.np-occasion{ font-size: 0.8rem; color: var(--gold); letter-spacing: 0.08em; }
+
+/* Song list */
+.song-list { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.song-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.song-active {
+  background: rgba(201,168,76,0.1) !important;
+  border-color: rgba(201,168,76,0.4) !important;
+}
+
+.song-art {
+  width: 52px; height: 52px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.song-art img { width: 100%; height: 100%; object-fit: cover; }
+.song-art-placeholder {
+  width: 100%; height: 100%;
+  background: rgba(201,168,76,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.song-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+.song-title   { font-size: 0.95rem; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.song-occasion{ font-size: 0.75rem; color: rgba(245,240,232,0.5); }
+
+.song-controls { display: flex; gap: 0.5rem; align-items: center; }
+.song-play-btn, .song-lyrics-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.3);
+  background: rgba(201,168,76,0.08);
+  color: var(--gold-light);
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.song-play-btn:hover, .song-lyrics-btn:hover { background: rgba(201,168,76,0.2); }
+
+/* Lyrics popup */
+.lyrics-popup {
+  position: relative;
+  padding: 1.5rem;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.lyrics-close {
+  position: absolute;
+  top: 0.8rem; right: 0.8rem;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: var(--white);
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+.lyrics-popup h4 { margin-bottom: 0.8rem; font-size: 1rem; }
+.lyrics-text {
+  font-size: 0.9rem;
+  color: rgba(245,240,232,0.75);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* Spotify */
+.spotify-embed { border-radius: 12px; overflow: hidden; }
