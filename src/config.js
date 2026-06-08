@@ -79,16 +79,16 @@ export const config = {
 
   // ── Reasons I Love You ─────────────────────────────────────
   reasons: [
-    "You make me laugh even on my worst days.",
-    "Your voice is my favourite sound.",
-    "You always know exactly what to say.",
-    "The way you care about everyone around you.",
-    "You make ordinary moments feel magical.",
-    "Your laugh is completely contagious.",
-    "You push me to be a better person.",
-    "The way your eyes light up when you're excited.",
-    "You make me feel safe and loved every single day.",
-    "Simply because you are you — and that's everything.",
+    "👀 Those brown eyes — the very first thing I noticed about you, and I was gone instantly.",
+    "🌟 Your character — the kind of person you are inside is what makes you truly beautiful.",
+    "😄 You're so witty — your humour catches me off guard every time and I love it.",
+    "🤗 You are emotionally nurturing in a way that makes everyone around you feel safe and seen.",
+    "🎙️ Your voice — honestly my favourite sound in the entire world, I could listen to you forever.",
+    "🧠 The way your mind works — you think so deeply about things and it genuinely amazes me.",
+    "💪 You handle everything with such quiet strength, even when things are hard.",
+    "🥰 The way you love — fully, genuinely, without holding back. It's rare and it's everything.",
+    "😂 You make me laugh like no one else ever has — real, uncontrollable, happy laughter.",
+    "💛 Simply because you are you — and being loved by you is the greatest gift of my life.",
   ],
 
   // ── Love Letter ────────────────────────────────────────────
