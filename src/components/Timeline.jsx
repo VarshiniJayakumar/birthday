@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import './Timeline.css'
 
-const PLACEHOLDER_ICONS = ['💑','💬','🌹','✈️','🌟']
+const PLACEHOLDER_ICONS = ['💬','🤝','🌹','💋','🌟']
 
 function TimelineItem({ item, index, isLast }) {
   const ref    = useRef(null)
