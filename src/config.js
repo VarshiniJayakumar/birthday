@@ -137,8 +137,8 @@ Happy Birthday, kuchupuchuu.`,
     hint:     "Try our special date 💛",
     content: {
       title:   "Your Surprise 🎁",
-      message: "I planned something just for us. Check your messages for the details — this one's from the heart.",
-      video:   null,        // e.g. "/videos/surprise.mp4"
+      message: "I planned something just for us, kuchupuchuu. A whole day designed around you — every detail thought of with love. Check your messages for the full plan. This one is straight from my heart 💛",
+      video:   null,
     },
   },
 

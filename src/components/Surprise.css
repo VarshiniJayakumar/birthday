@@ -109,3 +109,24 @@
   margin-bottom: 1rem;
   display: block;
 }
+
+/* Surprise divider */
+.surprise-divider {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem;
+  position: relative;
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+.surprise-divider::before,
+.surprise-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+.surprise-divider::before { left: 0; }
+.surprise-divider::after  { right: 0; background: linear-gradient(to left, transparent, var(--gold)); }

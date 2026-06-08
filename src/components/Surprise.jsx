@@ -230,11 +230,14 @@ export default function Surprise({ config }) {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
+              transition={{ delay: 1.5, duration: 0.6 }}
             >
+              <div className="surprise-divider">
+                <span>✨ But wait… there's more ✨</span>
+              </div>
+
               <motion.div
                 className="surprise-label serif gold"
-                style={{ marginTop: '2.5rem' }}
               >
                 🎀 Surprise #2
               </motion.div>
