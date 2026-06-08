@@ -37,7 +37,6 @@ function PasswordUnlock({ password, hint, onUnlock }) {
   return (
     <div className="password-form">
       <p className="password-prompt">Enter the secret code 🔐</p>
-      <p className="password-sub-hint">Hint: {hint}</p>
       <input
         className={`password-input ${shake ? 'password-error' : ''}`}
         type="text"
