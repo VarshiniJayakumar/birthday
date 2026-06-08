@@ -251,7 +251,7 @@ export default function Surprise({ config }) {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                   >
-                    <HoldButton onUnlock={handleUnlock2} />
+                    <ScratchCard onUnlock={handleUnlock2} />
                   </motion.div>
                 ) : (
                   <motion.div
