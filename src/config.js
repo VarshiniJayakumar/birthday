@@ -132,12 +132,20 @@ Happy Birthday, kuchupuchuu.`,
 
   // ── Surprise Reveal ────────────────────────────────────────
   surprise: {
-    mechanic: "password",   // "password" | "scratch" | "hold"
-    password: "0101",       // the answer the visitor must type
+    mechanic: "password",
+    password: "0101",
     hint:     "Try our special date 💛",
     content: {
-      title:   "Your Surprise 🎁",
-      message: "I planned something just for us, kuchupuchuu. A whole day designed around you — every detail thought of with love. Check your messages for the full plan. This one is straight from my heart 💛",
+      title:   "Our Future Together 💛",
+      message: `Here's everything I'm dreaming of with you, kuchupuchuu —
+
+🗼 Paris Together — croissants, the Eiffel Tower, and you beside me.
+🏡 Our Own Place — a home that's truly ours, just us.
+🚗 Road Trip — no plan, just us and the open road.
+🐾 Adopt a Pet — a fluffy little one to complete our family.
+💛 Grow Old Together — the most important one of all.
+
+Every single one of these, I want with you. 🥰`,
       video:   null,
     },
   },

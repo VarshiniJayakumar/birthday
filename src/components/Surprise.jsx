@@ -185,7 +185,7 @@ export default function Surprise({ config }) {
           >
             <div className="reveal-icon">🎉</div>
             <h3 className="serif gold reveal-title">{surprise.content.title}</h3>
-            <p className="reveal-message">{surprise.content.message}</p>
+            <p className="reveal-message" style={{ whiteSpace: 'pre-line' }}>{surprise.content.message}</p>
             {surprise.content.video && (
               <video src={surprise.content.video} controls className="reveal-video" />
             )}
