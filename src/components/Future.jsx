@@ -28,18 +28,6 @@ function FutureCard({ item, index }) {
       <div className="future-emoji">{item.emoji}</div>
       <h3 className="future-title serif">{item.title}</h3>
       <p className="future-detail">{item.detail}</p>
-      <div className="future-progress-wrap">
-        <div className="future-progress-bar">
-          <motion.div
-            className="future-progress-fill"
-            initial={{ width: 0 }}
-            whileInView={{ width: `${item.progress}%` }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1 + 0.3, duration: 0.8, ease: 'easeOut' }}
-          />
-        </div>
-        <span className="future-progress-label gold">{item.progress}%</span>
-      </div>
     </motion.div>
   )
 }
