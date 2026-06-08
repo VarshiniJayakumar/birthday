@@ -103,7 +103,7 @@ Every day with you is a gift I didn't know I needed. You are my calm in chaos, m
 
 On your birthday, I just want you to know: you are deeply, completely, endlessly loved.
 
-Happy Birthday, my favourite person.`,
+Happy Birthday, kuchupuchuu.`,
     musicEnabled: false,  // set true if you added a musicTrack in hero
   },
 
