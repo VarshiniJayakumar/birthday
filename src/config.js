@@ -153,7 +153,7 @@ Happy Birthday, kuchupuchuu.`,
 
   // ── Ending Section ─────────────────────────────────────────
   ending: {
-    message:   "Happy Birthday, my favourite person ❤️",
+    message:   "Happy Birthday, kuchupuchuu ❤️",
     subMessage: "Here's to every year ahead — with you.",
   },
 }
