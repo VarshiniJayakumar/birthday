@@ -25,37 +25,37 @@ export const config = {
   // ── Our Story Timeline ─────────────────────────────────────
   timeline: [
     {
-      date:        "Day 1",
-      title:       "The Day We Met",
-      description: "I still remember the exact moment I saw you.",
-      photo:       null,          // e.g. "/photos/met.jpg"
-      audio:       null,          // e.g. "/audio/memory1.mp3"
-    },
-    {
-      date:        "Week 2",
-      title:       "Our First Chat",
-      description: "You made me laugh so hard I cried.",
+      date:        "September 2020",
+      title:       "The Month We Spoke as Friends",
+      description: "It started with simple conversations — little did we know those words were the beginning of everything.",
       photo:       null,
       audio:       null,
     },
     {
-      date:        "Month 1",
-      title:       "Our First Date",
-      description: "Nervous, excited, and completely smitten.",
+      date:        "January 1, 2021",
+      title:       "The Day We Committed",
+      description: "We made it official. The best decision we ever made.",
       photo:       null,
       audio:       null,
     },
     {
-      date:        "Month 3",
-      title:       "First Trip Together",
-      description: "Every adventure is better with you.",
+      date:        "March 4, 2021",
+      title:       "Our First Meet",
+      description: "Seeing you for the first time in person — my heart knew before my mind did.",
       photo:       null,
       audio:       null,
     },
     {
-      date:        "Soon ✨",
+      date:        "April 16, 2021",
+      title:       "Our First Kiss",
+      description: "A moment I replay in my heart every single day. 💋",
+      photo:       null,
+      audio:       null,
+    },
+    {
+      date:        "Forever ✨",
       title:       "Our Future",
-      description: "So many beautiful chapters still to write.",
+      description: "So many beautiful chapters still to write — and I want every single one of them to be with you.",
       photo:       null,
       audio:       null,
     },
