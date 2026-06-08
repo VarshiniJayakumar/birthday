@@ -136,3 +136,16 @@
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
+
+.password-sub-hint {
+  font-size: 0.8rem;
+  color: rgba(245,240,232,0.4);
+  font-style: italic;
+  margin-top: -0.5rem;
+}
+
+.password-wrong {
+  color: #e8a0b0;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}

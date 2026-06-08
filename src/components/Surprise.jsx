@@ -7,28 +7,67 @@ import './Surprise.css'
 function PasswordUnlock({ password, hint, onUnlock }) {
   const [val,   setVal]   = useState('')
   const [error, setError] = useState(false)
+  const [shake, setShake] = useState(false)
 
-  const submit = (e) => {
+  const tryUnlock = () => {
+    const entered = val.trim().toLowerCase()
+    const correct = String(password).trim().toLowerCase()
+    if (entered === correct) {
+      onUnlock()
+    } else {
+      setError(true)
+      setShake(true)
+      setTimeout(() => { setError(false); setShake(false) }, 2000)
+    }
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault()
-    if (val.trim() === String(password)) { onUnlock() }
-    else { setError(true); setTimeout(() => setError(false), 2000) }
+    e.stopPropagation()
+    tryUnlock()
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      tryUnlock()
+    }
   }
 
   return (
-    <form className="password-form" onSubmit={submit}>
+    <div className="password-form">
       <p className="password-prompt">Enter the secret code 🔐</p>
+      <p className="password-sub-hint">Hint: {hint}</p>
       <input
-        className={`password-input ${error ? 'password-error' : ''}`}
+        className={`password-input ${shake ? 'password-error' : ''}`}
         type="text"
         value={val}
         onChange={e => setVal(e.target.value)}
-        placeholder="Your answer..."
+        onKeyDown={handleKeyDown}
+        placeholder="Type your answer..."
         maxLength={50}
         autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck="false"
       />
-      <button type="submit" className="btn-gift">Unlock 🎁</button>
-      {error && <p className="password-hint">{hint}</p>}
-    </form>
+      <button
+        type="button"
+        className="btn-gift"
+        onClick={tryUnlock}
+      >
+        Unlock 🎁
+      </button>
+      {error && (
+        <motion.p
+          className="password-wrong"
+          initial={{ opacity: 0, y: -5 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          That's not quite right 💛 Try again!
+        </motion.p>
+      )}
+    </div>
   )
 }
 
@@ -93,6 +132,7 @@ export default function Surprise({ config }) {
             <h3 className="serif gold reveal-title">{surprise.content.title}</h3>
             <p className="reveal-message">{surprise.content.message}</p>
             <motion.button
+              type="button"
               className="btn-gift"
               onClick={scrollToFuture}
               initial={{ opacity: 0 }}
