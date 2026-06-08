@@ -91,15 +91,6 @@ export default function Hero({ config, onOpenGift }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <motion.p
-            className="hero-for script"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            For {hisName} 💛
-          </motion.p>
-
           <h1 className="hero-title serif glow-text">
             <TypeAnimation
               sequence={[hero.greeting, 1000]}
