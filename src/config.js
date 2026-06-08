@@ -82,7 +82,7 @@ export const config = {
     "👀 Those brown eyes — the very first thing I noticed about you, and I was gone instantly.",
     "🌟 Your character — the kind of person you are inside is what makes you truly beautiful.",
     "😄 You're so witty — your humour catches me off guard every time and I love it.",
-    "🤗 You are emotionally nurturing in a way that makes everyone around you feel safe and seen.",
+    "🤗 You are emotionally nurturing in a way that makes me feel safe and seen like nowhere else.",
     "🎙️ Your voice — honestly my favourite sound in the entire world, I could listen to you forever.",
     "🧠 The way your mind works — you think so deeply about things and it genuinely amazes me.",
     "💪 You handle everything with such quiet strength, even when things are hard.",
