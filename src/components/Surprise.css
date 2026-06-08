@@ -130,3 +130,9 @@
 }
 .surprise-divider::before { left: 0; }
 .surprise-divider::after  { right: 0; background: linear-gradient(to left, transparent, var(--gold)); }
+
+.scratch-instruction {
+  color: rgba(245,240,232,0.6);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
