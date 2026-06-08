@@ -100,11 +100,12 @@ export default function Surprise2() {
             transition={{ duration: 0.6 }}
           >
             <div className="reveal-icon">🎁💝</div>
-            <h3 className="serif gold reveal-title">A Gift In My Hands</h3>
+            <h3 className="serif gold reveal-title">A Gift Made With Love</h3>
             <p className="reveal-message">
-              I have a gift waiting for you, kuchupuchuu — something I picked with
-              all my love, just for you. Because you deserve to be spoiled on your
-              special day and every day after. 🥰✨
+              I made this with my own hands, just for you, kuchupuchuu.
+              Every bit of effort went into it because you deserved something
+              that came straight from the heart — not bought, but built with love.
+              I hope every time you see it, you feel how much you mean to me. 🥰💛
             </p>
           </motion.div>
         )}
