@@ -127,10 +127,11 @@ function PasswordUnlock({ password, hint, onUnlock }) {
 /* ── Main Component ───────────────────────────────────────── */
 export default function Surprise({ config }) {
   const { surprise } = config
-  const [unlocked, setUnlocked] = useState(false)
+  const [unlocked1, setUnlocked1] = useState(false)
+  const [unlocked2, setUnlocked2] = useState(false)
 
-  const handleUnlock = () => {
-    setUnlocked(true)
+  const handleUnlock1 = () => {
+    setUnlocked1(true)
     confetti({
       particleCount: 150,
       spread: 100,
@@ -139,6 +140,18 @@ export default function Surprise({ config }) {
     })
     setTimeout(() => confetti({ particleCount: 80, angle: 60,  spread: 55, origin: { x: 0 } }), 400)
     setTimeout(() => confetti({ particleCount: 80, angle: 120, spread: 55, origin: { x: 1 } }), 600)
+  }
+
+  const handleUnlock2 = () => {
+    setUnlocked2(true)
+    confetti({
+      particleCount: 200,
+      spread: 120,
+      origin: { y: 0.5 },
+      colors: ['#c9a84c','#e8c97a','#f5f0e8','#e8a0b0','#ff69b4','#ffffff'],
+    })
+    setTimeout(() => confetti({ particleCount: 100, angle: 60,  spread: 70, origin: { x: 0 } }), 400)
+    setTimeout(() => confetti({ particleCount: 100, angle: 120, spread: 70, origin: { x: 1 } }), 700)
   }
 
   return (
@@ -150,7 +163,7 @@ export default function Surprise({ config }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Your Surprise
+          Your Surprises
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
@@ -158,33 +171,44 @@ export default function Surprise({ config }) {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          Something special is waiting for you 🎁
+          Two special things waiting just for you 🎁🎀
         </motion.p>
       </div>
 
       <div className="surprise-container">
+
+        {/* ── Surprise 1 ── */}
+        <motion.div
+          className="surprise-label serif gold"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          🎁 Surprise #1
+        </motion.div>
+
         <AnimatePresence mode="wait">
-          {!unlocked ? (
+          {!unlocked1 ? (
             <motion.div
-              key="lock"
+              key="lock1"
               className="surprise-lock glass"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
             >
-              {surprise.mechanic === 'scratch' && <ScratchCard onUnlock={handleUnlock} />}
-              {surprise.mechanic === 'hold'    && <HoldButton  onUnlock={handleUnlock} />}
+              {surprise.mechanic === 'scratch'  && <ScratchCard onUnlock={handleUnlock1} />}
+              {surprise.mechanic === 'hold'     && <HoldButton  onUnlock={handleUnlock1} />}
               {surprise.mechanic === 'password' && (
                 <PasswordUnlock
                   password={surprise.password}
                   hint={surprise.hint}
-                  onUnlock={handleUnlock}
+                  onUnlock={handleUnlock1}
                 />
               )}
             </motion.div>
           ) : (
             <motion.div
-              key="reveal"
+              key="reveal1"
               className="surprise-reveal glass"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -199,6 +223,55 @@ export default function Surprise({ config }) {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* ── Surprise 2 — appears after first is unlocked ── */}
+        <AnimatePresence>
+          {unlocked1 && (
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              <motion.div
+                className="surprise-label serif gold"
+                style={{ marginTop: '2.5rem' }}
+              >
+                🎀 Surprise #2
+              </motion.div>
+
+              <AnimatePresence mode="wait">
+                {!unlocked2 ? (
+                  <motion.div
+                    key="lock2"
+                    className="surprise-lock glass"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                  >
+                    <HoldButton onUnlock={handleUnlock2} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="reveal2"
+                    className="surprise-reveal glass"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <div className="reveal-icon">🎁💝</div>
+                    <h3 className="serif gold reveal-title">A Gift Just For You</h3>
+                    <p className="reveal-message">
+                      I have a gift waiting in my hands for you, kuchupuchuu. 
+                      Something I picked with all my love — because you deserve 
+                      to be spoiled on your special day. 🥰✨
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
       </div>
     </section>
   )

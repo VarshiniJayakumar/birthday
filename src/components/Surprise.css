@@ -100,3 +100,12 @@
   border-radius: 10px;
   margin-top: 0.5rem;
 }
+
+/* Surprise label */
+.surprise-label {
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  display: block;
+}
