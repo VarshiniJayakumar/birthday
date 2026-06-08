@@ -7,7 +7,7 @@
 export const config = {
 
   // ── Names ──────────────────────────────────────────────────
-  yourName: "Your Name",          // your name (shown in letter signature)
+  yourName: "kunjuu",
   hisName:  "His Name",           // his name (shown in hero greeting)
 
   // ── Hero Section ───────────────────────────────────────────
