@@ -11,18 +11,20 @@ import Letter   from './components/Letter'
 import Music    from './components/Music'
 import Surprise from './components/Surprise'
 import Future   from './components/Future'
+import Surprise2 from './components/Surprise2'
 import Ending   from './components/Ending'
 
 const SECTIONS = [
-  { id: 'hero',     label: 'Home'     },
-  { id: 'timeline', label: 'Story'    },
-  { id: 'gallery',  label: 'Gallery'  },
-  { id: 'reasons',  label: 'Reasons'  },
-  { id: 'letter',   label: 'Letter'   },
-  { id: 'music',    label: 'Music'    },
-  { id: 'surprise', label: 'Surprise' },
-  { id: 'future',   label: 'Future'   },
-  { id: 'ending',   label: 'Ending'   },
+  { id: 'hero',      label: 'Home'      },
+  { id: 'timeline',  label: 'Story'     },
+  { id: 'gallery',   label: 'Gallery'   },
+  { id: 'reasons',   label: 'Reasons'   },
+  { id: 'letter',    label: 'Letter'    },
+  { id: 'music',     label: 'Music'     },
+  { id: 'surprise',  label: 'Surprise'  },
+  { id: 'future',    label: 'Future'    },
+  { id: 'surprise2', label: 'Gift'      },
+  { id: 'ending',    label: 'Ending'    },
 ]
 
 function LoadingScreen({ onDone }) {
@@ -123,6 +125,7 @@ export default function App() {
             <Music    config={config} />
             <Surprise config={config} />
             <Future   config={config} />
+            <Surprise2 />
             <Ending   config={config} />
           </main>
         </>

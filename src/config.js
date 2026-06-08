@@ -136,16 +136,8 @@ Happy Birthday, kuchupuchuu.`,
     password: "0101",
     hint:     "Try our special date 💛",
     content: {
-      title:   "Our Future Together 💛",
-      message: `Here's everything I'm dreaming of with you, kuchupuchuu —
-
-🗼 Paris Together — croissants, the Eiffel Tower, and you beside me.
-🏡 Our Own Place — a home that's truly ours, just us.
-🚗 Road Trip — no plan, just us and the open road.
-🐾 Adopt a Pet — a fluffy little one to complete our family.
-💛 Grow Old Together — the most important one of all.
-
-Every single one of these, I want with you. 🥰`,
+      title:   "Scroll Down 👇",
+      message: "Our future is waiting for you just below, kuchupuchuu. Every dream, every plan — all of it is for us. 💛",
       video:   null,
     },
   },
