@@ -144,11 +144,12 @@ Happy Birthday, kuchupuchuu.`,
 
   // ── Future Together ────────────────────────────────────────
   future: [
-    { title: "Paris Together",        detail: "Croissants, the Eiffel Tower, and you.",  progress: 10, emoji: "🗼" },
-    { title: "Our Own Place",         detail: "A home that's ours.",                      progress: 30, emoji: "🏡" },
-    { title: "Road Trip Across Country", detail: "No plan, just us and the open road.",  progress: 5,  emoji: "🚗" },
-    { title: "Adopt a Pet",           detail: "A fluffy addition to our family.",         progress: 20, emoji: "🐾" },
-    { title: "Grow Old Together",     detail: "The most important one.",                  progress: 50, emoji: "💛" },
+    { title: "Our Family 👨‍👩‍👧‍👦",      detail: "Appu, Ammu, you and me — the four of us, our little world, our everything.",                                         progress: 10, emoji: "🍼" },
+    { title: "Our Home, Bike & Car 🏡", detail: "A home that's ours, a bike to ride together, a car for our family adventures.",                                       progress: 25, emoji: "🔑" },
+    { title: "Our Farm 🐄🐐",           detail: "Your goat farm, my cow farm — I promise we'll build both of them together, side by side.",                             progress: 15, emoji: "🌾" },
+    { title: "Our Garden 🌿",           detail: "Plants everywhere, birds singing, dogs running, cats napping — the peaceful life you always dreamed of.",              progress: 20, emoji: "🌸" },
+    { title: "World Trip ✈️",           detail: "Chicago first — your favourite city full of buildings and architecture. Then everywhere else the world has to offer.", progress: 5,  emoji: "🏙️" },
+    { title: "Growing Old Together 💛", detail: "Sitting side by side, watching Appu and Ammu happy and thriving — that's the dream that matters most.",               progress: 50, emoji: "👴👵" },
   ],
 
   // ── Ending Section ─────────────────────────────────────────
