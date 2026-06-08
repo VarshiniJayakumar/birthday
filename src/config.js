@@ -63,10 +63,10 @@ export const config = {
 
   // ── Memory Gallery ─────────────────────────────────────────
   gallery: [
-    { src: null, caption: "That one perfect day 🌸",   type: "image" },
-    { src: null, caption: "Always laughing with you",  type: "image" },
-    { src: null, caption: "My favourite smile",        type: "image" },
-    { src: null, caption: "Us, always",                type: "image" },
+    { src: "/photos/pic1.jpg", caption: "Us 💛",                    type: "image" },
+    { src: "/photos/pic2.jpg", caption: "From the very beginning 🌸", type: "image" },
+    { src: "/photos/pic3.jpg", caption: "Love is us ❤️",             type: "image" },
+    { src: "/photos/pic4.jpg", caption: "Every moment with you 💍",  type: "image" },
     { src: null, caption: "Golden hour with you",      type: "image" },
     { src: null, caption: "This memory lives rent-free", type: "image" },
   ],
