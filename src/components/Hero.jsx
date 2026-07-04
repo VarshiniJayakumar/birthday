@@ -91,6 +91,18 @@ export default function Hero({ config, onOpenGift }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
+          <motion.div
+            className="hero-birthday-badge"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            <span className="birthday-cake">🎂</span>
+            <span className="birthday-text">
+              June 9, 1997 &nbsp;·&nbsp; turning {new Date().getFullYear() - 1997}
+            </span>
+          </motion.div>
+
           <h1 className="hero-title serif glow-text">
             <TypeAnimation
               sequence={[hero.greeting, 1000]}

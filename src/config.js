@@ -15,8 +15,8 @@ export const config = {
     greeting:    "To the person who changed my world ❤️",
     subGreeting: "Today is all about you, my love.",
     // Set ONE of the two below. Leave the other as null.
-    countdownTo:   null,          // e.g. "2026-07-15" — future birthday date
-    countdownFrom: "2021-01-01",  // the day we committed
+    countdownTo:   "2026-06-09",  // his birthday — June 9
+    countdownFrom: null,
     backgroundImage: null,        // e.g. "/photos/hero-bg.jpg"  (put file in /public/photos/)
     backgroundVideo: null,        // e.g. "/videos/hero.mp4"
     musicTrack:      null,        // background music disabled

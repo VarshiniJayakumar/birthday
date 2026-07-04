@@ -54,6 +54,24 @@
   opacity: 0.9;
 }
 
+.hero-birthday-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(201,168,76,0.14), rgba(201,168,76,0.05));
+  border: 1px solid rgba(201,168,76,0.28);
+  border-radius: 50px;
+  padding: 0.4rem 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.birthday-cake { font-size: 1rem; }
+.birthday-text {
+  font-size: 0.78rem;
+  color: var(--gold-light);
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 3.8vw, 2.4rem);
