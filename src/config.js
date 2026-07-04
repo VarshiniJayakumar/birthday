@@ -19,7 +19,7 @@ export const config = {
     countdownFrom: "2021-01-01",  // the day we committed
     backgroundImage: null,        // e.g. "/photos/hero-bg.jpg"  (put file in /public/photos/)
     backgroundVideo: null,        // e.g. "/videos/hero.mp4"
-    musicTrack:      null,        // e.g. "/audio/our-song.mp3"
+    musicTrack:      "/audio/song1.mp3",  // plays softly on the hero — toggle with the 🔊 button
   },
 
   // ── Our Story Timeline ─────────────────────────────────────
@@ -114,25 +114,38 @@ Happy Birthday, kuchupuchuu.`,
   // ── Music Section ──────────────────────────────────────────
   songs: [
     {
-      title:    "Our Song",
-      occasion: "The one that always reminds me of you",
-      albumArt: null,   // e.g. "/photos/album1.jpg"
-      lyrics:   "Add your favourite lyrics here...",
-    },
-    {
-      title:    "Late Night Calls",
-      occasion: "Every long phone call",
+      title:    "Song 1",           // ← replace with the actual song name
+      occasion: "The one that always reminds me of you 💛",
+      src:      "/audio/song1.mp3",
       albumArt: null,
       lyrics:   null,
     },
     {
-      title:    "Road Trip Anthem",
-      occasion: "Windows down, singing loud",
+      title:    "Song 2",           // ← replace with the actual song name
+      occasion: "Every late night call 🌙",
+      src:      "/audio/song2.mp3",
+      albumArt: null,
+      lyrics:   null,
+    },
+    {
+      title:    "Song 3",           // ← replace with the actual song name
+      occasion: "Made for moments like this ✨",
+      src:      "/audio/song3.mp3",
+      albumArt: null,
+      lyrics:   null,
+    },
+    {
+      title:    "Song 4",           // ← replace with the actual song name
+      occasion: "Our road trip anthem 🚗",
+      src:      "/audio/song4.mp3",
       albumArt: null,
       lyrics:   null,
     },
   ],
   spotifyPlaylist: null,  // e.g. "https://open.spotify.com/playlist/XXXX"
+
+  // ── Hero background music (uses song1 by default) ──────────
+  // already set via hero.musicTrack below if you want one song to autoplay
 
   // ── Surprise Reveal ────────────────────────────────────────
   surprise: {

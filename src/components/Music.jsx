@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Music.css'
 
@@ -20,15 +20,59 @@ function VinylRecord({ spinning }) {
 export default function Music({ config }) {
   const { songs, spotifyPlaylist } = config
   const [active,  setActive]  = useState(null)
+  const [playing, setPlaying] = useState(false)
   const [lyrics,  setLyrics]  = useState(false)
+  const audioRef = useRef(null)
 
-  const play = (i) => {
-    if (active === i) { setActive(null); setLyrics(false) }
-    else              { setActive(i);    setLyrics(false) }
+  // When active song changes, load and play it
+  useEffect(() => {
+    if (!audioRef.current) return
+    if (active === null) {
+      audioRef.current.pause()
+      setPlaying(false)
+      return
+    }
+    const song = songs[active]
+    if (song?.src) {
+      audioRef.current.src = song.src
+      audioRef.current.play().then(() => setPlaying(true)).catch(() => setPlaying(false))
+    } else {
+      // No audio file — still show vinyl spinning as visual-only
+      setPlaying(true)
+    }
+  }, [active])
+
+  const handleSongClick = (i) => {
+    if (active === i) {
+      // Toggle play/pause on same song
+      if (playing) {
+        audioRef.current?.pause()
+        setPlaying(false)
+      } else {
+        audioRef.current?.play().catch(() => {})
+        setPlaying(true)
+      }
+    } else {
+      setActive(i)
+      setLyrics(false)
+    }
+  }
+
+  const handleEnded = () => {
+    // Auto-advance to next song
+    setActive(prev => (prev !== null && prev < songs.length - 1 ? prev + 1 : null))
   }
 
   return (
     <section id="music" className="music-section">
+      {/* Hidden audio element */}
+      <audio
+        ref={audioRef}
+        onEnded={handleEnded}
+        onPause={() => setPlaying(false)}
+        onPlay={() => setPlaying(true)}
+      />
+
       <div className="section-header">
         <motion.h2
           className="serif glow-text"
@@ -51,7 +95,7 @@ export default function Music({ config }) {
       <div className="music-player">
         {/* Vinyl display */}
         <div className="vinyl-stage">
-          <VinylRecord spinning={active !== null} />
+          <VinylRecord spinning={playing} />
           {active !== null && (
             <motion.div
               className="now-playing"
@@ -74,7 +118,7 @@ export default function Music({ config }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              onClick={() => play(i)}
+              onClick={() => handleSongClick(i)}
             >
               <div className="song-art">
                 {song.albumArt
@@ -87,13 +131,18 @@ export default function Music({ config }) {
                 <span className="song-occasion">{song.occasion}</span>
               </div>
               <div className="song-controls">
-                <button className="song-play-btn" aria-label={active === i ? 'Pause' : 'Play'}>
-                  {active === i ? '⏸' : '▶'}
+                <button
+                  className="song-play-btn"
+                  aria-label={active === i && playing ? 'Pause' : 'Play'}
+                  onClick={e => { e.stopPropagation(); handleSongClick(i) }}
+                >
+                  {active === i && playing ? '⏸' : '▶'}
                 </button>
                 {song.lyrics && active === i && (
                   <button
                     className="song-lyrics-btn"
                     onClick={e => { e.stopPropagation(); setLyrics(v => !v) }}
+                    aria-label="Show lyrics"
                   >
                     ♪
                   </button>
@@ -105,7 +154,7 @@ export default function Music({ config }) {
 
         {/* Lyrics popup */}
         <AnimatePresence>
-          {lyrics && active !== null && songs[active].lyrics && (
+          {lyrics && active !== null && songs[active]?.lyrics && (
             <motion.div
               className="lyrics-popup glass"
               initial={{ opacity: 0, y: 20 }}
