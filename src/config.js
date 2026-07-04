@@ -15,8 +15,8 @@ export const config = {
     greeting:    "To the person who changed my world ❤️",
     subGreeting: "Today is all about you, my love.",
     // Set ONE of the two below. Leave the other as null.
-    countdownTo:   "2026-06-09",  // his birthday — June 9
-    countdownFrom: null,
+    countdownTo:   null,
+    countdownFrom: "2021-01-01",  // the day we committed
     backgroundImage: null,        // e.g. "/photos/hero-bg.jpg"  (put file in /public/photos/)
     backgroundVideo: null,        // e.g. "/videos/hero.mp4"
     musicTrack:      null,        // background music disabled
@@ -164,7 +164,7 @@ Happy Birthday, kuchupuchuu.`,
 
   // ── Ending Section ─────────────────────────────────────────
   ending: {
-    message:   "Happy Birthday, kuchupuchuu ❤️",
-    subMessage: "Here's to every year ahead — with you.",
+    message:    "Happy Birthday, kuchupuchuu ❤️",
+    subMessage: "June 9, 1997 — the day the world got a little more beautiful 🌍",
   },
 }
