@@ -144,7 +144,7 @@ Happy Birthday, kuchupuchuu.`,
   surprise: {
     mechanic: "password",
     password: "0916",
-    hint:     "The date the universe gave us both to each other 🎂",
+    hint:     "The dates the universe brought us into the world 🌍",
     content: {
       title:   "Scroll Down 👇",
       message: "Our future is waiting for you just below, kuchupuchuu. Every dream, every plan — all of it is for us. 💛",
