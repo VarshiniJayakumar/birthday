@@ -143,7 +143,7 @@ Happy Birthday, kuchupuchuu.`,
   // ── Surprise Reveal ────────────────────────────────────────
   surprise: {
     mechanic: "password",
-    password: "0101",
+    password: "0916",
     hint:     "Try our special date 💛",
     content: {
       title:   "Scroll Down 👇",
