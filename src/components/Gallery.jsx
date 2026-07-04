@@ -123,12 +123,26 @@ export default function Gallery({ config }) {
           >
             <TiltCard className="polaroid" onClick={() => setSelected(item)}>
               {item.src
-                ? <img src={item.src} alt={item.caption} className="polaroid-img" />
-                : <div className="polaroid-img polaroid-placeholder"
-                       style={{ background: PLACEHOLDER_COLORS[i % PLACEHOLDER_COLORS.length] }}>
-                    📷
-                  </div>
+                ? <img
+                    src={item.src}
+                    alt={item.caption}
+                    className="polaroid-img"
+                    onError={e => {
+                      e.currentTarget.style.display = 'none'
+                      e.currentTarget.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                : null
               }
+              <div
+                className="polaroid-img polaroid-placeholder"
+                style={{
+                  background: PLACEHOLDER_COLORS[i % PLACEHOLDER_COLORS.length],
+                  display: item.src ? 'none' : 'flex',
+                }}
+              >
+                📷
+              </div>
               <p className="polaroid-caption script">{item.caption}</p>
             </TiltCard>
           </motion.div>

@@ -62,18 +62,22 @@ export const config = {
   ],
 
   // ── Memory Gallery ─────────────────────────────────────────
+  // All 8 photos from /public/photos/ — update captions to match your pics!
   gallery: [
-    { src: "/photos/pic1.jpg", caption: "Us 💛",                    type: "image" },
-    { src: "/photos/pic2.jpg", caption: "From the very beginning 🌸", type: "image" },
-    { src: "/photos/pic3.jpg", caption: "Love is us ❤️",             type: "image" },
-    { src: "/photos/pic4.jpg", caption: "Every moment with you 💍",  type: "image" },
-    { src: null, caption: "Golden hour with you",      type: "image" },
-    { src: null, caption: "This memory lives rent-free", type: "image" },
+    { src: "/photos/pic1.jpg", caption: "Us 💛",                          type: "image" },
+    { src: "/photos/pic2.jpg", caption: "From the very beginning 🌸",     type: "image" },
+    { src: "/photos/pic3.jpg", caption: "Love is us ❤️",                  type: "image" },
+    { src: "/photos/pic4.jpg", caption: "Every moment with you 💍",       type: "image" },
+    { src: "/photos/pic5.jpg", caption: "Golden hour with you ✨",        type: "image" },
+    { src: "/photos/pic6.jpg", caption: "This memory lives rent-free 😄", type: "image" },
+    { src: "/photos/pic7.jpg", caption: "Every adventure with you 🌍",    type: "image" },
+    { src: "/photos/pic8.jpg", caption: "My favourite person ❤️",         type: "image" },
   ],
-  // Before & Now slider (optional — set both or leave null)
+  // Before & Now slider — shows two pics side by side with a drag handle
+  // Swap pic1/pic4 for whichever two pics work best as a "then & now"
   beforeNow: {
-    before: null,   // e.g. "/photos/before.jpg"
-    now:    null,   // e.g. "/photos/now.jpg"
+    before: "/photos/pic1.jpg",
+    now:    "/photos/pic4.jpg",
     label:  "Then & Now 💛",
   },
 
