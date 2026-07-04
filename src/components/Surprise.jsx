@@ -64,7 +64,7 @@ function PasswordUnlock({ password, hint, onUnlock }) {
           initial={{ opacity: 0, y: -5 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          That's not quite right 💛 Try again!
+          That's not right, kuchupuchu 💛 Try again!
         </motion.p>
       )}
     </div>
