@@ -70,6 +70,13 @@
 /* Password */
 .password-form { display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; }
 .password-prompt { color: rgba(245,240,232,0.7); font-size: 0.95rem; }
+.password-hint-always {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  font-style: italic;
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
 .password-input {
   width: 100%;
   max-width: 280px;
