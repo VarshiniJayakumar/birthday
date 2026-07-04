@@ -73,13 +73,8 @@ export const config = {
     { src: "/photos/pic7.jpg", caption: "Every adventure with you 🌍",    type: "image" },
     { src: "/photos/pic8.jpg", caption: "My favourite person ❤️",         type: "image" },
   ],
-  // Before & Now slider — shows two pics side by side with a drag handle
-  // Swap pic1/pic4 for whichever two pics work best as a "then & now"
-  beforeNow: {
-    before: "/photos/pic1.jpg",
-    now:    "/photos/pic4.jpg",
-    label:  "Then & Now 💛",
-  },
+  // Before & Now slider — disabled
+  beforeNow: null,
 
   // ── Reasons I Love You ─────────────────────────────────────
   reasons: [
@@ -114,29 +109,29 @@ Happy Birthday, kuchupuchuu.`,
   // ── Music Section ──────────────────────────────────────────
   songs: [
     {
-      title:    "Song 1",           // ← replace with the actual song name
+      title:    "Song 1",
       occasion: "The one that always reminds me of you 💛",
       src:      "/audio/song1.mp3",
       albumArt: null,
       lyrics:   null,
     },
     {
-      title:    "Song 2",           // ← replace with the actual song name
-      occasion: "Every late night call 🌙",
+      title:    "Song 2",
+      occasion: "After a fight, I listen to this and tell my heavy heart — everything will be fine 🌧️",
       src:      "/audio/song2.mp3",
       albumArt: null,
       lyrics:   null,
     },
     {
-      title:    "Song 3",           // ← replace with the actual song name
-      occasion: "Made for moments like this ✨",
+      title:    "Song 3",
+      occasion: "This song feels like it was made for us ✨",
       src:      "/audio/song3.mp3",
       albumArt: null,
       lyrics:   null,
     },
     {
-      title:    "Song 4",           // ← replace with the actual song name
-      occasion: "Our road trip anthem 🚗",
+      title:    "Song 4",
+      occasion: "How our rest of the future feels like — in one song 🌅",
       src:      "/audio/song4.mp3",
       albumArt: null,
       lyrics:   null,

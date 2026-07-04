@@ -22,10 +22,12 @@
 
 .polaroid-img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  aspect-ratio: 4/5;
+  object-fit: contain;
+  object-position: center;
   display: block;
   border-radius: 2px;
+  background: #1a1a1a;
 }
 .polaroid-placeholder {
   display: flex;
