@@ -127,6 +127,12 @@ export default function Gallery({ config }) {
                     src={item.src}
                     alt={item.caption}
                     className="polaroid-img"
+                    style={item.zoom ? {
+                      objectFit: 'cover',
+                      objectPosition: 'center top',
+                      transform: 'scale(1.12)',
+                      transformOrigin: 'center top',
+                    } : {}}
                     onError={e => {
                       e.currentTarget.style.display = 'none'
                       e.currentTarget.nextSibling.style.display = 'flex'
