@@ -117,7 +117,7 @@ Happy Birthday, kuchupuchuu.`,
     },
     {
       title:    "Song 2",
-      occasion: "After a fight, I listen to this and tell my heavy heart — everything will be fine 🌧️",
+      occasion: "The song I play when my heart is heavy — it quietly reminds me that we always find our way back 🌧️",
       src:      "/audio/song2.mp3",
       albumArt: null,
       lyrics:   null,
