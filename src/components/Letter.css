@@ -48,13 +48,7 @@
   min-height: 420px;
 }
 .letter-lines {
-  position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(
-    transparent, transparent 31px,
-    rgba(180,155,110,0.15) 31px, rgba(180,155,110,0.15) 32px
-  );
-  background-position: 0 3rem;
-  border-radius: 6px; pointer-events: none;
+  display: none;
 }
 .letter-text {
   position: relative;
@@ -62,8 +56,10 @@
   font-family: var(--font-serif);
   font-size: 1rem;
   font-style: italic;
-  line-height: 2rem;
+  line-height: 1.9;
   white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
   min-height: 220px;
 }
 .letter-cursor {
