@@ -71,15 +71,19 @@ function PasswordUnlock({ password, hint, onUnlock }) {
 }
 
 /* ── Main Component ───────────────────────────────────────── */
-export default function Surprise({ config }) {
+export default function Surprise({ config, onUnlocked }) {
   const { surprise } = config
   const [unlocked, setUnlocked] = useState(false)
 
   const handleUnlock = () => {
     setUnlocked(true)
+    if (onUnlocked) onUnlocked()
     confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 }, colors: ['#c9a84c','#e8c97a','#f5f0e8','#e8a0b0','#ffffff'] })
     setTimeout(() => confetti({ particleCount: 80, angle: 60,  spread: 55, origin: { x: 0 } }), 400)
     setTimeout(() => confetti({ particleCount: 80, angle: 120, spread: 55, origin: { x: 1 } }), 600)
+    setTimeout(() => {
+      document.getElementById('future')?.scrollIntoView({ behavior: 'smooth' })
+    }, 1200)
   }
 
   const scrollToFuture = () => {

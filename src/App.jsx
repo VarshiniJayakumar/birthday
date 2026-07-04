@@ -81,6 +81,7 @@ function DotNav({ active }) {
 export default function App() {
   const [loading,       setLoading]       = useState(true)
   const [activeSection, setActiveSection] = useState('hero')
+  const [unlocked,      setUnlocked]      = useState(false)
   const { dotRef, ringRef }               = useCursor()
 
   // Track active section via IntersectionObserver
@@ -96,7 +97,7 @@ export default function App() {
       return obs
     })
     return () => observers.forEach(o => o?.disconnect())
-  }, [loading])
+  }, [loading, unlocked])
 
   const scrollToTimeline = () => {
     document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })
@@ -123,10 +124,22 @@ export default function App() {
             <Reasons  config={config} />
             <Letter   config={config} />
             <Music    config={config} />
-            <Surprise config={config} />
-            <Future   config={config} />
-            <Surprise2 />
-            <Ending   config={config} />
+            <Surprise config={config} onUnlocked={() => setUnlocked(true)} />
+
+            {/* Future, Surprise2 and Ending are LOCKED until password entered */}
+            <AnimatePresence>
+              {unlocked && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Future   config={config} />
+                  <Surprise2 />
+                  <Ending   config={config} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </main>
         </>
       )}
