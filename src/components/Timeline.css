@@ -1,5 +1,5 @@
 .timeline-section {
-  padding: 6rem 2rem;
+  padding: 6rem 1.5rem;
   background: linear-gradient(180deg, var(--black) 0%, var(--dark) 50%, var(--black) 100%);
 }
 
@@ -18,9 +18,10 @@
   letter-spacing: 0.05em;
 }
 
+/* ── Desktop: two-column alternating ──────────────────────── */
 .tl-container {
   position: relative;
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -35,11 +36,11 @@
 
 .tl-item {
   position: relative;
-  width: 45%;
+  width: 44%;
   margin-bottom: 3rem;
 }
-.tl-left  { margin-left: 0; margin-right: auto; padding-right: 2rem; }
-.tl-right { margin-left: auto; margin-right: 0; padding-left: 2rem; }
+.tl-left  { margin-left: 0; margin-right: auto; padding-right: 2.2rem; }
+.tl-right { margin-left: auto; margin-right: 0; padding-left: 2.2rem; }
 
 .tl-dot {
   position: absolute;
@@ -54,26 +55,30 @@
 .tl-right .tl-dot { left: -7px;  transform: translateX(-50%); }
 
 .tl-card {
-  padding: 1.5rem;
+  padding: 1.4rem 1.5rem;
+  border-radius: 14px;
 }
 
 .tl-date {
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   display: block;
   margin-bottom: 0.4rem;
+  color: var(--gold);
 }
 .tl-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--white);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
+  font-family: var(--font-serif);
+  font-style: italic;
 }
 .tl-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: rgba(245,240,232,0.65);
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
+  line-height: 1.65;
+  margin-bottom: 0.6rem;
 }
 
 .tl-photo {
@@ -85,11 +90,11 @@
 }
 .tl-photo-placeholder {
   width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: rgba(201,168,76,0.06);
   border-radius: 8px;
   margin-top: 0.5rem;
@@ -97,7 +102,7 @@
 
 .tl-audio-btn {
   margin-top: 0.8rem;
-  background: rgba(201,168,76,0.12);
+  background: rgba(201,168,76,0.1);
   border: 1px solid rgba(201,168,76,0.3);
   color: var(--gold-light);
   padding: 0.4rem 1rem;
@@ -107,8 +112,40 @@
 }
 .tl-audio-btn:hover { background: rgba(201,168,76,0.22); }
 
-@media (max-width: 700px) {
-  .tl-spine { left: 20px; }
-  .tl-item  { width: 100%; padding-left: 3rem !important; padding-right: 0 !important; margin-left: 0 !important; }
-  .tl-dot   { left: 13px !important; right: auto !important; transform: none !important; }
+
+/* ── Mobile: elegant single column with left spine ────────── */
+@media (max-width: 680px) {
+  .timeline-section { padding: 4rem 1rem; }
+
+  .tl-spine {
+    left: 18px;
+    transform: none;
+  }
+
+  .tl-item {
+    width: 100%;
+    padding-left: 2.8rem !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 2rem;
+  }
+
+  .tl-dot {
+    left: 11px !important;
+    right: auto !important;
+    transform: none !important;
+    top: 1.2rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .tl-card {
+    padding: 1.1rem 1.2rem;
+    border-radius: 12px;
+  }
+
+  .tl-title { font-size: 1rem; }
+  .tl-desc  { font-size: 0.84rem; }
+  .tl-date  { font-size: 0.68rem; }
 }

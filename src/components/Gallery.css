@@ -1,5 +1,5 @@
 .gallery-section {
-  padding: 6rem 2rem;
+  padding: 6rem 1.5rem;
   background: var(--dark);
 }
 
@@ -13,7 +13,7 @@
 
 .polaroid {
   background: #f5f0e8;
-  padding: 0.8rem 0.8rem 2.5rem;
+  padding: 0.7rem 0.7rem 2.2rem;
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   transition: box-shadow 0.3s;
@@ -38,9 +38,30 @@
 .polaroid-caption {
   text-align: center;
   color: #333;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-top: 0.5rem;
   line-height: 1.3;
+  padding: 0 0.2rem;
+}
+
+/* ── Mobile gallery ────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .gallery-section { padding: 4rem 1rem; }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .polaroid {
+    padding: 0.5rem 0.5rem 1.8rem;
+  }
+
+  .polaroid-caption {
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+  }
 }
 
 /* Modal */
