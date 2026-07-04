@@ -1,21 +1,26 @@
 .surprise-section {
-  padding: 6rem 2rem;
-  background: linear-gradient(180deg, var(--dark) 0%, #0d0820 100%);
+  padding: 7rem 1.5rem;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(60,20,100,0.35) 0%, transparent 60%),
+    linear-gradient(180deg, var(--dark) 0%, var(--dark3) 100%);
 }
 
 .surprise-container {
-  max-width: 500px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
 .surprise-lock,
 .surprise-reveal {
-  padding: 2.5rem;
+  padding: 2.8rem 2.5rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 1.3rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(201,168,76,0.18);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
 }
 
 /* Scratch */

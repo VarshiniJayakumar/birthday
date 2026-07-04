@@ -1,13 +1,15 @@
 .reasons-section {
-  padding: 6rem 2rem;
-  background: linear-gradient(180deg, var(--black) 0%, #0d0820 50%, var(--black) 100%);
+  padding: 7rem 1.5rem;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(60,20,90,0.3) 0%, transparent 60%),
+    linear-gradient(180deg, var(--black) 0%, var(--dark3) 50%, var(--black) 100%);
 }
 
 .reasons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1.2rem;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 1.1rem;
+  max-width: 860px;
   margin: 0 auto 2.5rem;
 }
 
@@ -15,77 +17,95 @@
   animation: pulse-highlight 0.5s ease-in-out 3;
 }
 @keyframes pulse-highlight {
-  0%,100% { transform: scale(1); box-shadow: none; }
-  50%      { transform: scale(1.08); box-shadow: 0 0 20px var(--gold); }
+  0%,100% { transform: scale(1); }
+  50%      { transform: scale(1.08); filter: drop-shadow(0 0 16px var(--gold)); }
 }
 
 .flip-card-wrap {
-  perspective: 600px;
-  height: 160px;
+  perspective: 700px;
+  height: 155px;
 }
 .flip-card-inner {
   position: relative;
   width: 100%; height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.45s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.flip-card-wrap.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
+.flip-card-wrap.flipped .flip-card-inner { transform: rotateY(180deg); }
 
 .flip-card-front,
 .flip-card-back {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  border-radius: 14px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
   padding: 1rem;
 }
 .flip-card-front {
-  background: rgba(201,168,76,0.08);
+  background: linear-gradient(135deg, rgba(201,168,76,0.1) 0%, rgba(201,168,76,0.04) 100%);
   border: 1px solid rgba(201,168,76,0.2);
   gap: 0.4rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+  transition: border-color 0.2s;
 }
-.flip-front-icon { font-size: 2rem; }
-.flip-front-num  { font-size: 0.75rem; letter-spacing: 0.1em; }
+.flip-card-front:hover { border-color: rgba(201,168,76,0.35); }
+.flip-front-icon { font-size: 1.9rem; }
+.flip-front-num  {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  opacity: 0.7;
+}
 
 .flip-card-back {
   transform: rotateY(180deg);
-  background: rgba(20,10,30,0.9);
-  border: 1px solid rgba(201,168,76,0.3);
+  background: linear-gradient(135deg, rgba(25,12,45,0.95) 0%, rgba(15,8,28,0.95) 100%);
+  border: 1px solid rgba(201,168,76,0.25);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 .flip-reason {
-  font-size: 0.9rem;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-style: italic;
   color: var(--cream);
   text-align: center;
-  line-height: 1.5;
-  font-style: italic;
+  line-height: 1.55;
 }
 
-.reasons-actions {
-  text-align: center;
-  margin-top: 1rem;
-}
+.reasons-actions { text-align: center; margin-top: 0.5rem; }
 .btn-another {
   background: transparent;
-  border: 1.5px solid var(--gold);
+  border: 1px solid rgba(201,168,76,0.4);
   color: var(--gold-light);
   padding: 0.75rem 2rem;
   border-radius: 50px;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  transition: background 0.2s, transform 0.2s;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 0 rgba(201,168,76,0);
 }
 .btn-another:hover {
-  background: rgba(201,168,76,0.12);
+  background: rgba(201,168,76,0.1);
+  border-color: var(--gold);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201,168,76,0.2);
 }
+
 .all-revealed {
-  font-size: 1.2rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
   font-style: italic;
+  color: var(--gold-light);
+}
+
+@media (max-width: 680px) {
+  .reasons-section { padding: 5rem 1rem; }
+  .reasons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.85rem;
+  }
+  .flip-card-wrap { height: 140px; }
+  .flip-reason { font-size: 0.78rem; }
 }
