@@ -19,7 +19,7 @@ export const config = {
     countdownFrom: "2021-01-01",  // the day we committed
     backgroundImage: null,        // e.g. "/photos/hero-bg.jpg"  (put file in /public/photos/)
     backgroundVideo: null,        // e.g. "/videos/hero.mp4"
-    musicTrack:      "/audio/song1.mp3",  // plays softly on the hero — toggle with the 🔊 button
+    musicTrack:      null,        // background music disabled
   },
 
   // ── Our Story Timeline ─────────────────────────────────────
