@@ -130,6 +130,10 @@ export default function Gallery({ config }) {
                     style={item.zoom ? {
                       objectFit: 'cover',
                       objectPosition: item.zoom,
+                    } : item.wide ? {
+                      objectFit: 'cover',
+                      objectPosition: 'center center',
+                      aspectRatio: '4/3',
                     } : {}}
                     onError={e => {
                       e.currentTarget.style.display = 'none'
