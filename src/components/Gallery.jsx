@@ -129,9 +129,9 @@ export default function Gallery({ config }) {
                     className="polaroid-img"
                     style={item.zoom ? {
                       objectFit: 'cover',
-                      objectPosition: 'center top',
-                      transform: 'scale(1.12)',
-                      transformOrigin: 'center top',
+                      objectPosition: 'center center',
+                      transform: 'scale(1.05)',
+                      transformOrigin: 'center center',
                     } : {}}
                     onError={e => {
                       e.currentTarget.style.display = 'none'
