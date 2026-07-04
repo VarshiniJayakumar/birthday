@@ -63,7 +63,7 @@ export const config = {
 
   // ── Memory Gallery ─────────────────────────────────────────
   gallery: [
-    { src: "/photos/pic1.jpg", caption: "Us 💛",                          type: "image", zoom: "50% 20%" },
+    { src: "/photos/pic1.jpg", caption: "Us 💛",                          type: "image" },
     { src: "/photos/pic2.jpg", caption: "From the very beginning 🌸",     type: "image" },
     { src: "/photos/pic3.jpg", caption: "Love is us ❤️",                  type: "image" },
     { src: "/photos/pic5.jpg", caption: "Golden hour with you ✨",        type: "image", zoom: "50% 25%" },
